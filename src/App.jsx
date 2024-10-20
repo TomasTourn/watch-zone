@@ -4,34 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Card } from './components/card'
 import { Carousel } from './components/Carousel'
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom'
+import { Home } from './components/Home'
+import { Watch } from './components/Watch'
 
 function App() {
   const [count, setCount] = useState(0)
-  const items = [
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 1' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 2' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 3' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 4' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 1' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 2' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 3' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 4' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 1' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 2' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 3' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 4' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 1' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 2' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 3' },
-    { imageUrl: 'https://images.cdn.prd.api.discomax.com/2024/07/11/44ba10e4-4b1f-3f32-a2ed-7ebc82725b6f.jpeg', alt: 'Item 4' },
-  ];
-  return (
-
-    <div className='w-screen overflow-visible'>
-      <Carousel items={items}/>
-    </div>
-    
-  )
+  return(
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/watch' element={<Watch/>}></Route>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
