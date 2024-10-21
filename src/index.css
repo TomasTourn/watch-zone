@@ -10,7 +10,10 @@ body {
   margin: 0;
   padding:0;
   background-color: #212121;
+}html, body {
+  overflow-x: hidden;
 }
+
 
 
 
